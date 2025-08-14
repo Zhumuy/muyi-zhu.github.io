@@ -1,0 +1,13 @@
+// ...existing code...
+    }
+
+    img {
+      max-width: 150px;
+      border-radius: 50%;
+
+      @include breakpoint($large) {
+        max-width: 200px;
+      }
+    }
+  }
+}
