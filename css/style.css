@@ -545,6 +545,7 @@ section {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-left: 4px solid #2563eb;
+    cursor: pointer;
 }
 
 .portfolio-item:hover {
@@ -553,8 +554,9 @@ section {
 }
 
 .portfolio-image {
-    height: 150px;
-    background: #e2e8f0;
+    aspect-ratio: 3508 / 2481;
+    height: auto;
+    background: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -564,7 +566,8 @@ section {
 .portfolio-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background: #fff;
     transition: transform 0.3s ease;
 }
 
@@ -592,7 +595,7 @@ section {
     font-size: 1rem;
 }
 
-.portfolio-category {
+.portfolio-date {
     color: #2563eb;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -652,6 +655,8 @@ section {
     text-align: center;
     color: #666;
 }
+
+/* Visitors & Map (removed) */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -799,4 +804,177 @@ section {
 
 .news-container::-webkit-scrollbar-thumb:hover {
     background: #a8a8a8;
+}
+
+/* Project Detail Pages */
+.back-link {
+    margin-bottom: 1rem;
+}
+
+.back-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.back-link a:hover {
+    color: #1d4ed8;
+}
+
+.project-date {
+    color: #2563eb;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.project-site {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-site i {
+    color: #ef4444;
+}
+
+.project-content {
+    margin-top: 1rem;
+}
+
+.project-description h2 {
+    color: #333;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.project-description h3 {
+    color: #444;
+    margin: 1rem 0 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.project-description p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-description ul {
+    margin: 0.5rem 0 1rem 1.5rem;
+    color: #666;
+}
+
+.project-description li {
+    margin-bottom: 0.3rem;
+    line-height: 1.5;
+}
+
+.project-gallery {
+    margin-top: 2rem;
+}
+
+.project-gallery h2 {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.gallery-item {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    max-height: 900px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.image-placeholder {
+    height: 550px;
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 2rem;
+}
+
+.image-placeholder p {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Responsive Design for Project Pages */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .gallery-item img {
+        max-height: 650px;
+    }
+    
+    .image-placeholder {
+        height: 400px;
+    }
+    
+    .project-description h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item img {
+        max-height: 450px;
+    }
+    
+    .image-placeholder {
+        height: 280px;
+    }
+    
+    .project-description h2 {
+        font-size: 1.2rem;
+    }
+    
+    .back-link {
+        margin-bottom: 0.8rem;
+    }
+}
+
+/* Wider content area for project detail pages */
+.project-content .container {
+    max-width: 1400px;
 }

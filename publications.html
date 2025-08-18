@@ -47,12 +47,13 @@
                 <div class="year-section">
                     <h2 class="year-title">2025</h2>
                     <div class="publications-list">
-                        <div class="publication-card">
+                        <div class="publication-card" data-date="2025.03.26">
                             <div class="publication-content">
                                 <h3 class="publication-title">
                                     <a href="https://doi.org/10.1016/j.jtrangeo.2025.104213" target="_blank">Spatial-temporal insights into gender gaps in East Asian ride-hailing: Workload, efficiency, nighttime safety, and operational patterns</a>
                                 </h3>
                                 <div class="publication-meta">
+                                    <span class="pub-date" style="display:none;">2025.03.26</span>
                                     <div class="publication-keywords">
                                         <span class="keyword">Ride-hailing</span>
                                         <span class="keyword">Gender</span>
@@ -70,12 +71,13 @@
                             </div>
                         </div>
 
-                        <div class="publication-card">
+                        <div class="publication-card" data-date="2025.08.07">
                             <div class="publication-content">
                                 <h3 class="publication-title">
                                     <a href="https://doi-org.eproxy.lib.hku.hk/10.1016/j.jtrangeo.2025.104382" target="_blank">Regional optimization of new-energy bus charging stations using a hybrid model integrating graph convolutional networks and simulated annealing</a>
                                 </h3>
                                 <div class="publication-meta">
+                                    <span class="pub-date" style="display:none;">2025.08.07</span>
                                     <div class="publication-keywords">
                                         <span class="keyword">Electric Bus Charging Stations</span>
                                         <span class="keyword">Graph Convolutional Network (GCN)</span>
@@ -93,12 +95,13 @@
                             </div>
                         </div>
 
-                        <div class="publication-card">
+                        <div class="publication-card" data-date="2025.06.18">
                             <div class="publication-content">
                                 <h3 class="publication-title">
                                     <a href="https://www.tapconference.org/" target="_blank">Commuter Exposure to Air Pollution in a Highly Transit-Dependent City: A CaseStudy of Hong Kong Island</a>
                                 </h3>
                                 <div class="publication-meta">
+                                    <span class="pub-date" style="display:none;">2025.06.18</span>
                                     <div class="publication-keywords">
                                         <span class="keyword">Air Quality</span>
                                         <span class="keyword">Commuter Exposure</span>
@@ -116,12 +119,13 @@
                             </div>
                         </div>
 
-                        <div class="publication-card">
+                        <div class="publication-card" data-status="ongoing">
                             <div class="publication-content">
                                 <h3 class="publication-title">
                                     <a href="#" target="_blank">Unveiling Changes in Urban Visual Perception Inequality in High-Density Cities: Insights from Housing Types and Travel Distances Using Time-Series Street View Imagery</a>
                                 </h3>
                                 <div class="publication-meta">
+                                    <span class="pub-status" style="display:none;">ongoing</span>
                                     <div class="publication-keywords">
                                         <span class="keyword">Urban Visual Perception</span>
                                         <span class="keyword">Spatiotemporal Evolution</span>
@@ -140,12 +144,13 @@
                             </div>
                         </div>
 
-                        <div class="publication-card">
+                        <div class="publication-card" data-status="ongoing">
                             <div class="publication-content">
                                 <h3 class="publication-title">
                                     <a href="#" target="_blank">Investigating Day-Night Pedestrian Crash Risk Using Double Machine Learning and Geographically Weighted Causal Random Forests with Synthesized Street View Imagery</a>
                                 </h3>
                                 <div class="publication-meta">
+                                    <span class="pub-status" style="display:none;">ongoing</span>
                                     <div class="publication-keywords">
                                         <span class="keyword">Pedestrian Crash Risk</span>
                                         <span class="keyword">Double Machine Learning</span>
@@ -165,6 +170,35 @@
                         </div>
                     </div>
                 </div>
+                <!-- 2023 Publications -->
+                <div class="year-section">
+                    <h2 class="year-title">2023</h2>
+                    <div class="publications-list">
+                        <div class="publication-card" data-date="2023.09.23">
+                            <div class="publication-content">
+                                <h3 class="publication-title">
+                                    <a href="https://www.cnki.net/KCMS/detail/detail.aspx?dbcode=CPFD&dbname=CPFDLAST2023&filename=ZHCG202309039186&uniplatform=OVERSEA&v=ONm8tbqGEUStAwKCOsBS2cOatUa4yX5jfShVs7rNLQdtfBARlVzL8Lsk6W5xT-yzNE73B3bozac%3d" target="_blank">Study on the cultural and industrial activation of Liuliqu Village under the background of rural revitalization</a>
+                                </h3>
+                                <div class="publication-meta">
+                                    <span class="pub-date" style="display:none;">2023.09.23</span>
+                                    <div class="publication-keywords">
+                                        <span class="keyword">Cultural Revitalization</span>
+                                        <span class="keyword">Rural Revitalization</span>
+                                        <span class="keyword">Liuli Culture</span>
+                                    </div>
+                                    <p class="publication-authors">Jiayi Wang, Xinyu Wang, Yuechu Shi, Linqing Cao, Ying Liu, <strong>Muyi Zhu</strong>, Lanlin Xiang</p>
+                                    <p class="publication-journal">Annual National Planning Conference (in Chinese)</p>
+                                </div>
+                            </div>
+                            <div class="publication-image">
+                                <img src="images/publications/Study on the cultural and industrial activation of Liuliqu Village under the background of rural revitalization.png" alt="Liuliqu Village study" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="publication-image-placeholder" style="display: none;">
+                                    <i class="fas fa-landmark"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -179,5 +213,26 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+    // Sort publications: ongoing first, then by hidden date desc
+    (function() {
+        const yearSections = document.querySelectorAll('.year-section');
+        yearSections.forEach(section => {
+            const list = section.querySelector('.publications-list');
+            if (!list) return;
+            const cards = Array.from(list.querySelectorAll('.publication-card'));
+            cards.sort((a, b) => {
+                const aOngoing = a.hasAttribute('data-status');
+                const bOngoing = b.hasAttribute('data-status');
+                if (aOngoing && !bOngoing) return -1;
+                if (!aOngoing && bOngoing) return 1;
+                const aDate = a.getAttribute('data-date') || '0000.00.00';
+                const bDate = b.getAttribute('data-date') || '0000.00.00';
+                return bDate.localeCompare(aDate);
+            });
+            cards.forEach(c => list.appendChild(c));
+        });
+    })();
+    </script>
 </body>
 </html>
