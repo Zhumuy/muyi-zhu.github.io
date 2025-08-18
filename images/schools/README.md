@@ -1,19 +1,15 @@
-# 学校图标文件夹
+# School Logos
 
-这个文件夹用于存放学校相关的图标和logo。
+Put university logos used in the Education section here.
 
-## 需要的文件
+## Files
+- `hku.png` — The University of Hong Kong (HKU)
+- `bjfu.png` — Beijing Forestry University (BJFU)
 
-1. **hku.png** - 香港大学图标
-2. **bjfu.png** - 北京林业大学图标
+## Requirements
+- PNG (transparent recommended), ~80×80 px
+- White background is applied inside a circular frame on the page
+- Keep files compact (<100 KB recommended)
 
-## 图标要求
-
-- **尺寸**: 建议 80x80 像素
-- **格式**: PNG（支持透明背景）
-- **文件大小**: 建议小于 100KB
-- **内容**: 学校官方logo或图标
-
-## 使用方法
-
-将学校图标放在这个文件夹中，网站会自动在Education部分显示这些图标。
+Usage
+- Place files here; `index.html` references `images/schools/hku.png` and `images/schools/bjfu.png`.

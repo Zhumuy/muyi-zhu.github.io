@@ -1,20 +1,16 @@
-# 论文配图文件夹
+# Publication Images
 
-这个文件夹用于存放论文相关的配图。
+Images for each paper card.
 
-## 需要的文件
+## Naming
+- Use the exact paper title as the file name, e.g.
+  - `Spatial-temporal insights into gender gaps in East Asian ride-hailing.png`
+  - `Regional optimization of new-energy bus charging stations ... .png`
 
-1. **paper1.png** - 论文1的配图
-2. **paper2.png** - 论文2的配图
-3. **paper3.png** - 论文3的配图
+## Requirements
+- PNG or JPG, keep under ~800 KB
+- Prefer a white background for transparent PNGs
+- Aspect ratio: any; cards use `object-fit: contain`
 
-## 图片要求
-
-- **尺寸**: 建议 300x200 像素
-- **格式**: PNG 或 JPG
-- **文件大小**: 建议小于 200KB
-- **内容**: 论文相关的图表、截图或示意图
-
-## 使用方法
-
-将论文配图放在这个文件夹中，然后在HTML中引用这些图片，显示在publication卡片的右侧。
+Usage
+- Place files here and reference them in `publications.html` and `index.html`.
