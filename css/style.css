@@ -887,6 +887,15 @@ section {
     font-size: 1.4rem;
 }
 
+/* Embedded PDF viewer for project pages */
+.pdf-viewer {
+    height: 900px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
 .gallery-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -954,6 +963,10 @@ section {
     .project-description h2 {
         font-size: 1.3rem;
     }
+
+    .pdf-viewer {
+        height: 650px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -971,6 +984,10 @@ section {
     
     .back-link {
         margin-bottom: 0.8rem;
+    }
+
+    .pdf-viewer {
+        height: 480px;
     }
 }
 
